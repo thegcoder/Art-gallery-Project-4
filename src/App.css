@@ -1,0 +1,76 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  padding: 0 20px;
+  background: #6532CB;
+}
+
+.nav > * {
+  padding-right: 20px;
+}
+
+.nav .nav-logo {
+  color: #99CC00;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.stocks a {
+  color: #99CC00;
+  font-weight: bold;
+}
+
+.search-results {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.search-btn {
+  margin: 0 10px;
+  border: 0;
+  border-radius: 5px;
+  background: #6532CB;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.displayImage {
+  display: inline;
+}
+
+.displayImage img {
+  width: 450px;
+  margin: 10px;
+}
+
+.displayText {
+  margin: 10px;
+}
+
+.profileImage img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+.formItem {
+  margin: 20px 10px;
+}
+
+.home img {
+  width: 100%;
+}
