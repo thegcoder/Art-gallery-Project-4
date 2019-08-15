@@ -8,11 +8,11 @@ import {
 
 import Home from './Components/Home';
 import ArtWorks from './Components/ArtWork';
-import Users from './Components/Users';
-import UserData from './Components/UserData';
-import UserDelete from './Components/UserDelete';
-import UserCreate from './Components/UserCreate';
-import UserEdit from './Components/UserEdit';
+import Artists from './Components/Artists';
+import ArtistData from './Components/ArtistData';
+import ArtistDelete from './Components/ArtistDelete';
+import ArtistCreate from './Components/ArtistCreate';
+import ArtistEdit from './Components/ArtistEdit';
 import ArtWorkData from './Components/ArtWorkData';
 import ArtWorkDelete from './Components/ArtWorkDelete';
 import ArtWorkCreate from './Components/ArtWorkCreate';
