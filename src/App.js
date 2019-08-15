@@ -44,6 +44,11 @@ import './App.css';
               <Route path='/artist/create' component={ArtistCreate} />
               <Route path='/artist/edit/:id' component={ArtistEdit} />
               <Route path='/artist/:id' component={ArtistData} />
+              <Route exact path='/genres' component={Genres} />
+              <Route path='/genre/delete/:id' component={GenreDelete} />
+              <Route path='/genre/create' component={GenreCreate} />
+              <Route path='/genre/edit/:id' component={GenreEdit} />
+              <Route path='/genre/:id' component={GenreData} />
             </Switch>
           </div>
         </div>
