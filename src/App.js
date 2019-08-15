@@ -27,8 +27,8 @@ import './App.css';
         <div>
           <div className='nav'>
             <div className='nav-item'><Link to={'/'}><span className='nav-logo'>VP</span></Link></div>
-            <div className='nav-item'><Link to={'/destinations'}>Destinations</Link></div>
-            <div className='nav-item'><Link to={'/users'}>Users</Link></div>
+            <div className='nav-item'><Link to={'/artworks'}>ArtWorks</Link></div>
+            <div className='nav-item'><Link to={'/artists'}>Artists</Link></div>
             <div className='nav-item'><a href="https://vacation-planner-api.herokuapp.com/">API</a></div>
           </div>
           <div className='content'>
