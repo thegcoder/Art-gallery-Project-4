@@ -5,21 +5,21 @@ const axios = require('axios');
 
 //const api = 'https://vacation-planner-api.herokuapp.com/api/all/destinations';
 
-export default class ArtWorks extends Component {
+export default class Genres extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      artWorks: []
+      genres: []
     }
   }
 
   componentDidMount() {
     axios.get(api)
       .then(res => {
-          const artWorks = res.data;
-          this.setState({ ArtWorks });
+          const genres = res.data;
+          this.setState({ Genres });
       })
       .catch(function (error) {
         // handle error
@@ -33,11 +33,11 @@ export default class ArtWorks extends Component {
   render() {
     return (
         <div>
-          <h2>ArtWorks</h2>
-          <Link to={`/artwork/create`}><h3>Create Artwork</h3></Link>
-          {this.state.ArtWorks.map((artWork, index) => {
+          <h2>Genres</h2>
+          <Link to={`/genre/create`}><h3>Create Genre</h3></Link>
+          {this.state.Genres.map((genre, index) => {
             return (
-              <div key={artWork._id}>
+              <div key={genre._id}>
                 </div>
               </div>
             )
