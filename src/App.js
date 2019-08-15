@@ -34,16 +34,16 @@ import './App.css';
           <div className='content'>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/destinations' component={Destinations} />
-              <Route path='/destination/delete/:id' component={DestinationDelete} />
-              <Route path='/destination/create' component={DestinationCreate} />
-              <Route path='/destination/edit/:id' component={DestinationEdit} />
-              <Route path='/destination/:id' component={DestinationData} />
-              <Route exact path='/users' component={Users} />
-              <Route path='/user/delete/:id' component={UserDelete} />
-              <Route path='/user/create' component={UserCreate} />
-              <Route path='/user/edit/:id' component={UserEdit} />
-              <Route path='/user/:id' component={UserData} />
+              <Route exact path='/artworks' component={Artworks} />
+              <Route path='/artwork/delete/:id' component={ArtworkDelete} />
+              <Route path='/artwork/create' component={ArtworkCreate} />
+              <Route path='/artwork/edit/:id' component={ArtworkEdit} />
+              <Route path='/artwork/:id' component={ArtworkData} />
+              <Route exact path='/users' component={Artists} />
+              <Route path='/artist/delete/:id' component={ArtistDelete} />
+              <Route path='/artist/create' component={ArtistCreate} />
+              <Route path='/artist/edit/:id' component={ArtistEdit} />
+              <Route path='/artist/:id' component={ArtistData} />
             </Switch>
           </div>
         </div>

@@ -6,8 +6,8 @@ export default class Home extends Component {
     return (
         <div className="home">
           <h2>Art Gallery Project</h2>
-          <Link to={'/artWorks'}>
-            <img src="https://media.giphy.com/media/7bbxxRnX3G2WI/giphy.gif" 
+          <Link to={'/artworks'}>
+            <img src="https://media.giphy.com/media/7bbxxRnX3G2WI/giphy.gif"
             alt="art"/>
           </Link>
         </div>
