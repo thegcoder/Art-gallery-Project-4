@@ -7,16 +7,16 @@ import {
 } from 'react-router-dom';
 
 import Home from './Components/Home';
-import Destinations from './Components/Destinations';
+import ArtWorks from './Components/ArtWork';
 import Users from './Components/Users';
 import UserData from './Components/UserData';
 import UserDelete from './Components/UserDelete';
 import UserCreate from './Components/UserCreate';
 import UserEdit from './Components/UserEdit';
-import DestinationData from './Components/DestinationData';
-import DestinationDelete from './Components/DestinationDelete';
-import DestinationCreate from './Components/DestinationCreate';
-import DestinationEdit from './Components/DestinationEdit';
+import ArtWorkData from './Components/ArtWorkData';
+import ArtWorkDelete from './Components/ArtWorkDelete';
+import ArtWorkCreate from './Components/ArtWorkCreate';
+import ArtWorkEdit from './Components/ArtWorkEdit';
 
 import './App.css';
 
