@@ -5,21 +5,21 @@ const axios = require('axios');
 
 //const api = 'https://vacation-planner-api.herokuapp.com/api/';
 
-export default class ArtistData extends Component {
+export default class GenreData extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      artWork: {}
+      genre: {}
     };
   }
 
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/artWorks/${id}`)
+    axios.get(`${api}read/genre/${id}`)
       .then(res => {
-        this.setState({ artWork: res.data });
+        this.setState({ genre: res.data });
       })
       .catch(function (error) {
         // handle error
@@ -36,15 +36,15 @@ export default class ArtistData extends Component {
       //  <h2>City: {this.state.artWork.city}</h2>
         <div>
           <div className="displayImage">
-            <img src={this.state.artwork.imageUrl} alt={this.state.artWork.name}/>
+            <img src={this.state.genre.imageUrl} alt={this.state.genre.name}/>
           </div>
         //  <h3>Country: {this.state.destination.country}</h3>
-          <p>{this.state.destination.description}</p>
+          <p>{this.state.genre.description}</p>
         </div>
-        <Link to={{ pathname:`/artWork/edit/${this.state.artWork._id}`, state: { artWork: this.state.artWork } }}>
+        <Link to={{ pathname:`/genre/edit/${this.state.genre._id}`, state: { genre: this.state.genre } }}>
           <button className='search-btn'>Edit</button>
         </Link>
-        <Link to={{ pathname:`/artWork/delete/${this.state.artWork._id}`, state: { artWork: this.state.artWork } }}>
+        <Link to={{ pathname:`/genre/delete/${this.state.genre._id}`, state: { genre: this.state.genre } }}>
           <button className='search-btn'>Delete</button>
         </Link>
       </div>
