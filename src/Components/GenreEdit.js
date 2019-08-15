@@ -5,7 +5,7 @@ const axios = require('axios');
 
 //const api = 'https://vacation-planner-api.herokuapp.com/api/';
 
-export default class ArtWorkEdit extends Component {
+export default class GenreEdit extends Component {
 
   constructor(props) {
     super(props);
@@ -41,9 +41,9 @@ export default class ArtWorkEdit extends Component {
 
     const id = this.state.id;
 
-    axios.post(`${api}update/artWorks/${id}`, data)
+    axios.post(`${api}update/genre/${id}`, data)
       .then(res => {
-        history.push(`/artWork/${res.data._id}`);
+        history.push(`/genre/${res.data._id}`);
       })
       .catch(function (error) {
         // handle error
@@ -57,7 +57,7 @@ export default class ArtWorkEdit extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/artWorks/${id}`)
+    axios.get(`${api}read/genre/${id}`)
       .then(res => {
         this.setState({
           description: res.data.description,
@@ -77,7 +77,7 @@ export default class ArtWorkEdit extends Component {
   render() {
     return (
         <div>
-          <h2>Edit ArtWork</h2>
+          <h2>Edit Genre</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="formItem">
               <div>{this.state.imageUrl}</div>
@@ -90,7 +90,7 @@ export default class ArtWorkEdit extends Component {
               <input type="text" name="description" placeholder={this.state.description} onChange={this.handleChange}/>
             </div>
             <button className='search-btn'>Submit</button>
-            <Link to={`/artWork/${this.state.id}`}><input type="button" value="Cancel" className='search-btn' /></Link>
+            <Link to={`/genre/${this.state.id}`}><input type="button" value="Cancel" className='search-btn' /></Link>
           </form>
         </div>
     );
