@@ -34,7 +34,7 @@ export default class ArtWorks extends Component {
     return (
         <div>
           <h2>ArtWorks</h2>
-          <Link to={`/destination/create`}><h3>Create Artwork</h3></Link>
+          <Link to={`/artwork/create`}><h3>Create Artwork</h3></Link>
           {this.state.ArtWorks.map((artWork, index) => {
             return (
               <div key={artWork._id}>
