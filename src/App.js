@@ -17,7 +17,11 @@ import ArtWorkData from './Components/ArtWorkData';
 import ArtWorkDelete from './Components/ArtWorkDelete';
 import ArtWorkCreate from './Components/ArtWorkCreate';
 import ArtWorkEdit from './Components/ArtWorkEdit';
-
+import Genres from './Components/Genre';
+import GenreData from './Components/GenreData';
+import GenreDelete from './Components/GenreDelete';
+import GenreCreate from './Components/GenreCreate';
+import GenreEdit from './Components/GenreEdit';
 import './App.css';
 
  export default class App extends Component {
