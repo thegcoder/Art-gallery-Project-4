@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Home from './Components/Home';
-import ArtWorks from './Components/ArtWork';
+import ArtWorks from './Components/ArtWorks';
 import Artists from './Components/Artists';
 import ArtistData from './Components/ArtistData';
 import ArtistDelete from './Components/ArtistDelete';
