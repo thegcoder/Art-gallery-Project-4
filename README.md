@@ -6,6 +6,8 @@ The purpose of this app is to create a profile for users to view artists and
 artwork online.  User can also sell and buy artworks from artists around the world.
 
 ## Dependencies
+[Heroku](https://art-gallery-app1.herokuapp.com/)
+
 [React](https://reactjs.org/)
 
 [Nodejs](https://nodejs.org/)
