@@ -38,7 +38,6 @@ export default class Genres extends Component {
           {this.state.Genres.map((genre, index) => {
             return (
               <div key={genre._id}>
-                </div>
               </div>
             )
           })}

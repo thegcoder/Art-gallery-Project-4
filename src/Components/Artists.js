@@ -39,7 +39,7 @@ export default class Artists extends Component {
             return (
               <div key={artist._id}>
                 <div className="displayText">
-                  {user.name}
+                  {artist.name}
                 </div>
                 <div className="profileImage">
                   <Link to={`/artist/${artist._id}`}>

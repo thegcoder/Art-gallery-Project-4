@@ -38,7 +38,6 @@ export default class ArtWorks extends Component {
           {this.state.ArtWorks.map((artWork, index) => {
             return (
               <div key={artWork._id}>
-                </div>
               </div>
             )
           })}

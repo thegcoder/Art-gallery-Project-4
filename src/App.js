@@ -39,11 +39,11 @@ import './App.css';
           <div className='content'>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/artworks' component={Artworks} />
-              <Route path='/artwork/delete/:id' component={ArtworkDelete} />
-              <Route path='/artwork/create' component={ArtworkCreate} />
-              <Route path='/artwork/edit/:id' component={ArtworkEdit} />
-              <Route path='/artwork/:id' component={ArtworkData} />
+              <Route exact path='/artworks' component={ArtWorks} />
+              <Route path='/artwork/delete/:id' component={ArtWorkDelete} />
+              <Route path='/artwork/create' component={ArtWorkCreate} />
+              <Route path='/artwork/edit/:id' component={ArtWorkEdit} />
+              <Route path='/artwork/:id' component={ArtWorkData} />
               <Route exact path='/users' component={Artists} />
               <Route path='/artist/delete/:id' component={ArtistDelete} />
               <Route path='/artist/create' component={ArtistCreate} />
