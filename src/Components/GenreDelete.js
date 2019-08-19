@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const axios = require('axios');
 
-//const api = 'https://vacation-planner-api.herokuapp.com/api/';
+const api = 'https://art-gallery-project-api.herokuapp.com/api/';
 
 export default class GenreDelete extends Component {
 

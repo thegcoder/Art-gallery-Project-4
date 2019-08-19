@@ -34,7 +34,7 @@ import './App.css';
             <div className='nav-item'><Link to={'/artworks'}>ArtWorks</Link></div>
             <div className='nav-item'><Link to={'/artists'}>Artists</Link></div>
             <div className='nav-item'><Link to={'/genres'}>Genres</Link></div>
-            <div className='nav-item'><a href="https://vacation-planner-api.herokuapp.com/">API</a></div>
+            <div className='nav-item'><a href="https://art-gallery-project-api.herokuapp.com/">API</a></div>
           </div>
           <div className='content'>
             <Switch>

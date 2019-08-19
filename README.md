@@ -14,8 +14,6 @@ artwork online.  User can also sell and buy artworks from artists around the wor
 
 [ERD](https://user-images.githubusercontent.com/46980815/63193026-6ebc9680-c03a-11e9-9ecb-83624ca48915.jpg)
 
-
-
-
+[API](https://art-gallery-project-api.herokuapp.com/)
 
 [Trello Board](https://trello.com/b/4ngI3hPk/project-4-art-app)
