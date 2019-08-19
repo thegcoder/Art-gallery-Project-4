@@ -30,7 +30,7 @@ import './App.css';
       <Router>
         <div>
           <div className='nav'>
-            <div className='nav-item'><Link to={'/'}><span className='nav-logo'>AG</span></Link></div>
+            <div className='nav-item'><Link to={'/'}><span className='nav-logo'>TAI</span></Link></div>
             <div className='nav-item'><Link to={'/artworks'}>ArtWorks</Link></div>
             <div className='nav-item'><Link to={'/artists'}>Artists</Link></div>
             <div className='nav-item'><Link to={'/genres'}>Genres</Link></div>
