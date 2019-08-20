@@ -44,7 +44,7 @@ import './App.css';
               <Route path='/artwork/create' component={ArtWorkCreate} />
               <Route path='/artwork/edit/:id' component={ArtWorkEdit} />
               <Route path='/artwork/:id' component={ArtWorkData} />
-              <Route exact path='/users' component={Artists} />
+              <Route exact path='/artists' component={Artists} />
               <Route path='/artist/delete/:id' component={ArtistDelete} />
               <Route path='/artist/create' component={ArtistCreate} />
               <Route path='/artist/edit/:id' component={ArtistEdit} />

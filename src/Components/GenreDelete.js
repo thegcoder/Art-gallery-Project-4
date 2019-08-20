@@ -11,6 +11,7 @@ export default class GenreDelete extends Component {
     super(props);
 
     this.state = {
+      id: '',
       description: '',
       imageUrl: ''
     };
@@ -27,9 +28,9 @@ export default class GenreDelete extends Component {
 
     const id = this.state.id;
 
-    axios.post(`${api}delete/genre/${id}`, data)
+    axios.post(`${api}delete/genres/${id}`, data)
       .then(res => {
-        history.push(`/genre`);
+        history.push(`/genres`);
       })
       .catch(function (error) {
         // handle error
@@ -43,11 +44,12 @@ export default class GenreDelete extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/genre/${id}`)
+    axios.get(`${api}read/genres/${id}`)
       .then(res => {
         this.setState({
           description: res.data.description,
           id: res.data._id,
+          name: res.data.name,
           imageUrl: res.data.imageUrl
         });
       })
@@ -63,7 +65,7 @@ export default class GenreDelete extends Component {
   render() {
     return (
         <div>
-          <h2>Delete Genre</h2>
+          <h2>Delete Genre: {this.state.name}</h2>
           <form onSubmit={this.handleSubmit}>
             <div>
               <div>{this.state.imageUrl}</div>

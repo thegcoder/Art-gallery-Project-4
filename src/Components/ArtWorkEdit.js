@@ -12,7 +12,8 @@ export default class ArtWorkEdit extends Component {
 
     this.state = {
       description: '',
-      imageUrl: ''
+      imageUrl: '',
+      name: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,6 +27,9 @@ export default class ArtWorkEdit extends Component {
         break;
       case 'imageUrl':
         this.setState({imageUrl: event.target.value});
+        break;
+      case 'name':
+        this.setState({name: event.target.value});
         break;
       default:
         break;
@@ -41,9 +45,9 @@ export default class ArtWorkEdit extends Component {
 
     const id = this.state.id;
 
-    axios.post(`${api}update/artWorks/${id}`, data)
+    axios.post(`${api}update/artworks/${id}`, data)
       .then(res => {
-        history.push(`/artWork/${res.data._id}`);
+        history.push(`/artwork/${res.data._id}`);
       })
       .catch(function (error) {
         // handle error
@@ -57,7 +61,7 @@ export default class ArtWorkEdit extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/artWorks/${id}`)
+    axios.get(`${api}read/artworks/${id}`)
       .then(res => {
         this.setState({
           description: res.data.description,
@@ -80,6 +84,11 @@ export default class ArtWorkEdit extends Component {
           <h2>Edit ArtWork</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="formItem">
+              <div>{this.state.name}</div>
+              <label>Name:</label>
+              <input type="text" name="name" placeholder={this.state.name} onChange={this.handleChange}/>
+            </div>
+            <div className="formItem">
               <div>{this.state.imageUrl}</div>
               <label>Image Url:</label>
               <input type="text" name="imageUrl" placeholder={this.state.imageUrl} onChange={this.handleChange}/>
@@ -90,7 +99,7 @@ export default class ArtWorkEdit extends Component {
               <input type="text" name="description" placeholder={this.state.description} onChange={this.handleChange}/>
             </div>
             <button className='search-btn'>Submit</button>
-            <Link to={`/artWork/${this.state.id}`}><input type="button" value="Cancel" className='search-btn' /></Link>
+            <Link to={`/artwork/${this.state.id}`}><input type="button" value="Cancel" className='search-btn' /></Link>
           </form>
         </div>
     );

@@ -38,7 +38,7 @@ export default class ArtistData extends Component {
           <img src={this.state.artist.imageUrl} alt={this.state.artist.name} />
         </div>
         <div>
-          Email: {this.state.artist.bio}
+          Bio: {this.state.artist.bio}
         </div>
         <Link to={{ pathname:`/artist/edit/${this.state.artist._id}`, state: { artist: this.state.artist } }}>
           <button className='search-btn'>Edit</button>

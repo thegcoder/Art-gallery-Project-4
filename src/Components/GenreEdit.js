@@ -11,8 +11,10 @@ export default class GenreEdit extends Component {
     super(props);
 
     this.state = {
+      id: '',
       description: '',
-      imageUrl: ''
+      imageUrl: '',
+      name: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,6 +28,9 @@ export default class GenreEdit extends Component {
         break;
       case 'imageUrl':
         this.setState({imageUrl: event.target.value});
+        break;
+      case 'name':
+        this.setState({name: event.target.value});
         break;
       default:
         break;
@@ -41,7 +46,7 @@ export default class GenreEdit extends Component {
 
     const id = this.state.id;
 
-    axios.post(`${api}update/genre/${id}`, data)
+    axios.post(`${api}update/genres/${id}`, data)
       .then(res => {
         history.push(`/genre/${res.data._id}`);
       })
@@ -57,11 +62,12 @@ export default class GenreEdit extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/genre/${id}`)
+    axios.get(`${api}read/genres/${id}`)
       .then(res => {
         this.setState({
           description: res.data.description,
           id: res.data._id,
+          name: res.data.name,
           imageUrl: res.data.imageUrl
         });
       })
@@ -79,6 +85,11 @@ export default class GenreEdit extends Component {
         <div>
           <h2>Edit Genre</h2>
           <form onSubmit={this.handleSubmit}>
+            <div className="formItem">
+              <div>{this.state.name}</div>
+              <label>Name:</label>
+              <input type="text" name="name" placeholder={this.state.name} onChange={this.handleChange}/>
+            </div>
             <div className="formItem">
               <div>{this.state.imageUrl}</div>
               <label>Image Url:</label>

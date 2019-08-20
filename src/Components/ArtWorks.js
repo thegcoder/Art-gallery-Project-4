@@ -11,14 +11,14 @@ export default class ArtWorks extends Component {
     super(props);
 
     this.state = {
-      artWorks: []
+      ArtWorks: []
     }
   }
 
   componentDidMount() {
     axios.get(api)
       .then(res => {
-          const artWorks = res.data;
+          const ArtWorks = res.data;
           this.setState({ ArtWorks });
       })
       .catch(function (error) {
@@ -38,6 +38,15 @@ export default class ArtWorks extends Component {
           {this.state.ArtWorks.map((artWork, index) => {
             return (
               <div key={artWork._id}>
+                <div className="displayText">
+                  {artWork.name}
+                </div>
+                <div className="profileImage">
+                  <Link to={`/artwork/${artWork._id}`}>
+                    <img src={artWork.imageUrl} alt={artWork.name} />
+                  </Link>
+                </div>
+                <hr/>
               </div>
             )
           })}

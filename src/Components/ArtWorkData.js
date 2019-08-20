@@ -17,7 +17,7 @@ export default class ArtistData extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/artWorks/${id}`)
+    axios.get(`${api}read/artworks/${id}`)
       .then(res => {
         this.setState({ artWork: res.data });
       })
@@ -33,18 +33,17 @@ export default class ArtistData extends Component {
   render() {
     return (
       <div>
-      //  <h2>City: {this.state.artWork.city}</h2>
+        <h2>Artwork: {this.state.artWork.name}</h2>
         <div>
           <div className="displayImage">
-            <img src={this.state.artwork.imageUrl} alt={this.state.artWork.name}/>
+            <img src={this.state.artWork.imageUrl} alt={this.state.artWork.name}/>
           </div>
-        //  <h3>Country: {this.state.destination.country}</h3>
-          <p>{this.state.destination.description}</p>
+          <p>{this.state.artWork.description}</p>
         </div>
-        <Link to={{ pathname:`/artWork/edit/${this.state.artWork._id}`, state: { artWork: this.state.artWork } }}>
+        <Link to={{ pathname:`/artwork/edit/${this.state.artWork._id}`, state: { artWork: this.state.artWork } }}>
           <button className='search-btn'>Edit</button>
         </Link>
-        <Link to={{ pathname:`/artWork/delete/${this.state.artWork._id}`, state: { artWork: this.state.artWork } }}>
+        <Link to={{ pathname:`/artwork/delete/${this.state.artWork._id}`, state: { artWork: this.state.artWork } }}>
           <button className='search-btn'>Delete</button>
         </Link>
       </div>

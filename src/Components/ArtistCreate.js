@@ -11,8 +11,7 @@ export default class ArtistCreate extends Component {
     super(props);
 
     this.state = {
-      email: '',
-      id: '',
+      bio: '',
       name: '',
       imageUrl: ''
     };
@@ -23,8 +22,8 @@ export default class ArtistCreate extends Component {
 
   handleChange(event) {
     switch (event.target.name) {
-      case 'email':
-        this.setState({email: event.target.value});
+      case 'bio':
+        this.setState({bio: event.target.value});
         break;
       case 'imageUrl':
         this.setState({imageUrl: event.target.value});
@@ -75,7 +74,7 @@ export default class ArtistCreate extends Component {
               <input type="text" name="imageUrl" placeholder={this.state.imageUrl} onChange={this.handleChange}/>
             </div>
             <button className='search-btn'>Submit</button>
-            <Link to={'/users'}><Link to={'/users'}><input type="button" value="Cancel" className='search-btn' /></Link></Link>
+            <Link to={'/artists'}><input type="button" value="Cancel" className='search-btn' /></Link>
           </form>
         </div>
     );

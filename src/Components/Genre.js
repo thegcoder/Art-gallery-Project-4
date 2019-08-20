@@ -11,14 +11,14 @@ export default class Genres extends Component {
     super(props);
 
     this.state = {
-      genres: []
+      Genres: []
     }
   }
 
   componentDidMount() {
     axios.get(api)
       .then(res => {
-          const genres = res.data;
+          const Genres = res.data;
           this.setState({ Genres });
       })
       .catch(function (error) {
@@ -38,6 +38,15 @@ export default class Genres extends Component {
           {this.state.Genres.map((genre, index) => {
             return (
               <div key={genre._id}>
+                <div className="displayText">
+                  {genre.name}
+                </div>
+                <div className="profileImage">
+                  <Link to={`/genre/${genre._id}`}>
+                    <img src={genre.imageUrl} alt={genre.name} />
+                  </Link>
+                </div>
+                <hr/>
               </div>
             )
           })}

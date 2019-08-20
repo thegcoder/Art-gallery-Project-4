@@ -11,7 +11,7 @@ export default class GenreCreate extends Component {
     super(props);
 
     this.state = {
-      id: '',
+      description: '',
       name: '',
       imageUrl: ''
     };
@@ -22,6 +22,9 @@ export default class GenreCreate extends Component {
 
   handleChange(event) {
     switch (event.target.name) {
+      case 'description':
+        this.setState({description: event.target.value});
+        break;
       case 'imageUrl':
         this.setState({imageUrl: event.target.value});
         break;
@@ -63,15 +66,15 @@ export default class GenreCreate extends Component {
               <input type="text" name="name" placeholder={this.state.name} onChange={this.handleChange}/>
             </div>
             <div className="formItem">
-              <div>Bio: {this.state.bio}</div>
-              <input type="text" name="bio" placeholder={this.state.bio} onChange={this.handleChange}/>
-            </div>
-            <div className="formItem">
               <div>Image Url: {this.state.imageUrl}</div>
               <input type="text" name="imageUrl" placeholder={this.state.imageUrl} onChange={this.handleChange}/>
             </div>
+            <div className="formItem">
+              <div>Description: {this.state.description}</div>
+              <input type="text" name="description" placeholder={this.state.description} onChange={this.handleChange}/>
+            </div>
             <button className='search-btn'>Submit</button>
-            <Link to={'/artists'}><Link to={'/artists'}><input type="button" value="Cancel" className='search-btn' /></Link></Link>
+            <Link to={'/genres'}><input type="button" value="Cancel" className='search-btn' /></Link>
           </form>
         </div>
     );

@@ -11,8 +11,10 @@ export default class ArtWorkDelete extends Component {
     super(props);
 
     this.state = {
+      id: '',
       description: '',
-      imageUrl: ''
+      imageUrl: '',
+      name: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,9 +29,9 @@ export default class ArtWorkDelete extends Component {
 
     const id = this.state.id;
 
-    axios.post(`${api}delete/artWorks/${id}`, data)
+    axios.post(`${api}delete/artworks/${id}`, data)
       .then(res => {
-        history.push(`/artWorks`);
+        history.push(`/artworks`);
       })
       .catch(function (error) {
         // handle error
@@ -43,12 +45,13 @@ export default class ArtWorkDelete extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/artWorks/${id}`)
+    axios.get(`${api}read/artworks/${id}`)
       .then(res => {
         this.setState({
           description: res.data.description,
           id: res.data._id,
-          imageUrl: res.data.imageUrl
+          imageUrl: res.data.imageUrl,
+          name: res.data.name
         });
       })
       .catch(function (error) {
@@ -63,7 +66,7 @@ export default class ArtWorkDelete extends Component {
   render() {
     return (
         <div>
-          <h2>Delete ArtWork</h2>
+          <h2>Delete ArtWork: {this.state.name}</h2>
           <form onSubmit={this.handleSubmit}>
             <div>
               <div>{this.state.imageUrl}</div>
@@ -72,7 +75,7 @@ export default class ArtWorkDelete extends Component {
               <div>{this.state.description}</div>
             </div>
             <button className='search-btn'>Submit</button>
-            <Link to={`/artWork/${this.state.id}`}><input type="button" value="Cancel" className='search-btn' /></Link>
+            <Link to={`/artwork/${this.state.id}`}><input type="button" value="Cancel" className='search-btn' /></Link>
           </form>
         </div>
     );

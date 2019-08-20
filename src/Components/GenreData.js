@@ -17,7 +17,7 @@ export default class GenreData extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    axios.get(`${api}read/genre/${id}`)
+    axios.get(`${api}read/genres/${id}`)
       .then(res => {
         this.setState({ genre: res.data });
       })
@@ -33,12 +33,11 @@ export default class GenreData extends Component {
   render() {
     return (
       <div>
-      //  <h2>City: {this.state.artWork.city}</h2>
+        <h2>Genre: {this.state.genre.name}</h2>
         <div>
           <div className="displayImage">
             <img src={this.state.genre.imageUrl} alt={this.state.genre.name}/>
           </div>
-        //  <h3>Country: {this.state.destination.country}</h3>
           <p>{this.state.genre.description}</p>
         </div>
         <Link to={{ pathname:`/genre/edit/${this.state.genre._id}`, state: { genre: this.state.genre } }}>

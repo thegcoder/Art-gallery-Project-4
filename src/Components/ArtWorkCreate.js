@@ -11,6 +11,7 @@ export default class ArtWorkEdit extends Component {
     super(props);
 
     this.state = {
+      name: '',
       description: '',
       imageUrl: ''
     };
@@ -26,6 +27,9 @@ export default class ArtWorkEdit extends Component {
         break;
       case 'imageUrl':
         this.setState({imageUrl: event.target.value});
+        break;
+      case 'name':
+        this.setState({name: event.target.value});
         break;
       default:
         break;
@@ -55,8 +59,12 @@ export default class ArtWorkEdit extends Component {
   render() {
     return (
         <div>
-          <h2>Edit ArtWork</h2>
+          <h2>Create ArtWork</h2>
           <form onSubmit={this.handleSubmit}>
+            <div className="formItem">
+              <div>Name: {this.state.name}</div>
+              <input type="text" name="name" placeholder={this.state.name} onChange={this.handleChange}/>
+            </div>
             <div className="formItem">
               <div>Image Url: {this.state.imageUrl}</div>
               <input type="text" name="imageUrl" placeholder={this.state.imageUrl} onChange={this.handleChange}/>
