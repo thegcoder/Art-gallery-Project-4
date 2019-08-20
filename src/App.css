@@ -4,7 +4,7 @@
   width: 100vw;
   height: 50px;
   padding: 0 20px;
-  background: ##F7B48D;
+  background: ##6532CB;
 }
 
 .nav > * {
@@ -12,7 +12,7 @@
 }
 
 .nav .nav-logo {
-  color: #3300CC;
+  color: #99CC00;
   font-weight: bold;
   font-size: 1.5em;
 }
