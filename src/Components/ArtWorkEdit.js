@@ -66,7 +66,8 @@ export default class ArtWorkEdit extends Component {
         this.setState({
           description: res.data.description,
           id: res.data._id,
-          imageUrl: res.data.imageUrl
+          imageUrl: res.data.imageUrl,
+          name: res.data.name
         });
       })
       .catch(function (error) {
